@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Navbar styles */
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      .navbar img {
+        float: left;
+        max-height: 50px;
+        padding: 5px;
+      }
+
+      .navbar a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      @media screen and (max-width: 800px) {
+        .navbar a {
+          float: none;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* Welcome section styles */
+      .welcome-section {
+        background-image: url('kan3.png');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+      }
+
+      .welcome-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .welcome-heading {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      .welcome-text {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+      }
+
+      .shop-now-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .shop-now-btn:hover {
+        background-color: #ddd;
+      }
+
+      /* Portfolio section styles */
+      .portfolio {
+        margin: 50px 0;
+        text-align: center;
+      }
+
+      .portfolio h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .filter-btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+
+      .filter-btns button {
+        border: 1px solid #ddd;
+        width: 200px;
+        height: 40px;
+        padding: 15px;
+        color: white;
+        background-color: red;
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .filter-btns button:hover {
+        background-color: blue;
+        transform: scale(1.05);
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .mask {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        text-align: center;
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+        box-sizing: border-box;
+        padding: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .mask img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .mask:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .mask:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .mask h2 {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+
+      .mask p {
+        margin: 5px 0;
+        font-size: 1em;
+      }
+
+      .buy-btn {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .buy-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      @media screen and (max-width: 800px) {
+        .mask {
+          flex: 1 1 calc(50% - 20px);
+          max-width: calc(50% - 20px);
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .mask {
+          flex: 1 1 calc(100% - 20px);
+          max-width: calc(100% - 20px);
+        }
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        padding: 0 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .footer-section h3 {
+        margin-bottom: 10px;
+      }
+
+      .footer-section p,
+      .footer-section a {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-section a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-right img {
+        width: 40px;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+      }
+
+      .footer-right img:hover {
+        transform: scale(1.1);
+      }
+
+      .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .features p {
+        margin: 5px 0;
+      }
+
+      .features i {
+        margin-right: 10px;
+        color: #fff;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <img src="logo.png.jpg" alt="Logo" />
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="studentjobboard.html">Job Board</a>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <div class="welcome-content">
+        <h1 class="welcome-heading">Welcome to Student Essentials Hub</h1>
+        <p class="welcome-text">
+          Unlock exclusive student discounts and find everything you need for campus life. From study aids to dorm decor, we've got you covered.
+        </p>
+      </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio" id="portfolio">
+      <h3 class="trendy-text">Our Trendy Products</h3>
+      <div class="filter-btns">
+        <button onclick="filterSelection('all')">All</button>
+        <button onclick="filterSelection('fancy')">Girl's Beauty & Fancy</button>
+        <button onclick="filterSelection('computers')">Computers Accessories</button>
+        <button onclick="filterSelection('stationary')">Stationary Items</button>
+        <button onclick="filterSelection('mobile')">Mobile Accessories</button>
+        <button onclick="filterSelection('mens')">Men's Beauty & Personal care</button>
+        <button onclick="filterSelection('fashion')">Men's Fashion</button>
+        <button onclick="filterSelection('complete')">Complete Hygiene Kit</button>
+      </div>
+      <div class="gallery">
+        <!-- Girl's Beauty & Fancy category -->
+        <div class="mask fancy">
+          <img src="ri.png.jpg" alt="Silver Oxidised Ring" />
+          <h2>Silver Oxidised Ring (D-3)</h2>
+          <p>₹120 Rupees</p>
+          <a href="ri.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+        <div class="mask fancy">
+          <img src="clini.png.jpg" alt="Clinic plus Shampoo" />
+          <h2>Clinic plus Strong and Healthy Shampoo</h2>
+          <p>₹60 Rupees</p>
+          <a href="clini.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+        <div class="mask fancy">
+          <img src="beu.png.jpg" alt="Beauty Combo Kit" />
+          <h2>Beauty Combo kit (S-6)</h2>
+          <p>₹220 Rupees</p>
+          <a href="beu.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+
+        <!-- Computers Accessories category -->
+        <div class="mask computers hide">
+          <img src="lapcl.png.jpg" alt="Laptop Cleaner" />
+          <h2>Laptop Cleaner (C-1)</h2>
+          <p>₹20 Rupees</p>
+          <a href="lapcl.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+        <div class="mask computers hide">
+          <img src="key.png.jpg" alt="Keyboard" />
+          <h2>Keyboard (C-2)</h2>
+          <p>₹50 Rupees</p>
+          <a href="key.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+
+        <!-- Stationary Items category -->
+        <div class="mask stationary hide">
+          <img src="noot.png.jpg" alt="Notebook" />
+          <h2>Notebook (S-1)</h2>
+          <p>₹25 Rupees</p>
+          <a href="noot.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+        <div class="mask stationary hide">
+          <img src="pen.png.jpg" alt="Pen" />
+          <h2>Pen (S-2)</h2>
+          <p>₹10 Rupees</p>
+          <a href="pen.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+
+        <!-- Mobile Accessories category -->
+        <div class="mask mobile hide">
+          <img src="head.png.jpg" alt="Headphone" />
+          <h2>Headphone (M-1)</h2>
+          <p>₹150 Rupees</p>
+          <a href="head.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+        <div class="mask mobile hide">
+          <img src="cover.png.jpg" alt="Mobile Cover" />
+          <h2>Mobile Cover (M-2)</h2>
+          <p>₹100 Rupees</p>
+          <a href="cover.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+
+        <!-- Men's Beauty & Personal care category -->
+        <div class="mask mens hide">
+          <img src="shav.png.jpg" alt="Shaving Kit" />
+          <h2>Shaving Kit (B-1)</h2>
+          <p>₹200 Rupees</p>
+          <a href="shav.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+        <div class="mask mens hide">
+          <img src="deo.png.jpg" alt="Deodorant" />
+          <h2>Deodorant (B-2)</h2>
+          <p>₹120 Rupees</p>
+          <a href="deo.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+
+        <!-- Men's Fashion category -->
+        <div class="mask fashion hide">
+          <img src="shirt.png.jpg" alt="Shirt" />
+          <h2>Shirt (F-1)</h2>
+          <p>₹500 Rupees</p>
+          <a href="shirt.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+        <div class="mask fashion hide">
+          <img src="pant.png.jpg" alt="Pant" />
+          <h2>Pant (F-2)</h2>
+          <p>₹600 Rupees</p>
+          <a href="pant.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+
+        <!-- Complete Hygiene Kit category -->
+        <div class="mask complete hide">
+          <img src="hyk.png.jpg" alt="Hygiene Kit" />
+          <h2>Complete Hygiene Kit</h2>
+          <p>₹300 Rupees</p>
+          <a href="hyk.html"><button class="buy-btn">Buy Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Your go-to platform for student essentials, discounts, and offers. We
+            bring the best deals right to your fingertips.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@studenthub.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-section footer-right">
+          <h3>Follow Us</h3>
+          <a href="#"><img src="iconfb.png.jpg" alt="Facebook" /></a>
+          <a href="#"><img src="inst.png.jpg" alt="Instagram" /></a>
+          <a href="#"><img src="twit.png.jpg" alt="Twitter" /></a>
+        </div>
+        <div class="footer-section features">
+          <h3>Features</h3>
+          <div class="feature-item">
+            <i class="fa fa-truck" aria-hidden="true"></i>
+            <p>Free Shipping</p>
+          </div>
+          <div class="feature-item">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <p>Student Discounts</p>
+          </div>
+          <div class="feature-item">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            <p>Quality Products</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Filter function
+      function filterSelection(category) {
+        var items = document.querySelectorAll(".mask");
+        items.forEach(function (item) {
+          if (category === "all") {
+            item.classList.remove("hide");
+          } else {
+            if (item.classList.contains(category)) {
+              item.classList.remove("hide");
+            } else {
+              item.classList.add("hide");
+            }
+          }
+        });
+      }
+      // Initialize with all items shown
+      filterSelection("all");
+    </script>
+  </body>
+</html>

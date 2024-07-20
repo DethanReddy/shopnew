@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Related Products</title>
+<style>
+    /* CSS for the related products */
+    .related-products {
+        display: none;
+    }
+    .related-products.active {
+        display: block;
+    }
+    .pro-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.pro{
+    width: 20%;
+    min-width: 180px;
+    padding: 10px 12px;
+    margin: 25px;
+    border: 1px solid #cce7d0;
+    margin-top: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0,0.03);
+    transition: 0.2 ease-in;
+
+}
+
+.pro img{
+    width:100%;
+    border-radius:20px;
+}
+.pro-container .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0,9)
+}
+.pro-container .pro .des{
+    text-align: start;
+    padding: 12px;
+}
+.pro-container .pro span{
+    color: #606063;
+    font-size:14px;
+    padding-top:12px
+}
+.pro-container .pro h4{
+    padding-top:10px;
+    color: #3f2860;
+    font-size: 16px;
+}
+.pro-container .pro h5{
+    padding-top: 11px;
+    color: #639bf1;
+    font-size: 16px;
+}
+.pro-container .pro .des i{
+    font-size: 16px;
+    color:rgb(243, 181,31);
+    
+}
+
+
+.pro-container1{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px;
+    justify-content:space-around;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+</style>
+</head>
+<body>
+
+<!-- Links to different product categories -->
+<div class=nav>
+    <a href="#" class="product-link" data-category="laptops">All</a>
+<a href="#" class="product-link" data-category="laptops">Laptops</a>
+<a href="#" class="product-link" data-category="phones">Phones</a>
+<a href="#" class="product-link" data-category="tablets">Mask</a>
+</div>
+
+<!-- Container to display related products -->
+<div class="related-products" id="laptops">
+    <h3>Laptops</h3>
+    <!-- Display related products for laptops here -->
+</div>
+<div class="related-products" id="All">
+    <h3>All</h3>
+    <div class="pro-container">
+        
+        <div class="pro">
+            
+
+       
+        <img src="product1.png.jpg">
+        <div class="des-1">
+            <span>Dennis Lingo</span>
+            <h4>Men's Solid Slim Fit</h4>
+            <h5>Cotton Casual Shirt</h5>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <p>$350</p>
+        </div>
+        </div>
+        <div class="pro">
+       <a href="shop.html">
+            <img src="product2.png.jpg">
+            <div class="des-1">
+                <span>Dennis Lingo</span>
+                <h4>Men's Solid Slim Fit</h4>
+                <h5>Cotton Casual Shirt</h5>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>$350</p>
+            
+            </div>
+            </a>
+            </div>
+            <div class="pro">
+       
+                <img src="product3.png.jpg">
+                <div class="des-1">
+                    <span>Dennis Lingo</span>
+                    <h4>Men's Solid Slim Fit</h4>
+                    <h5>Cotton Casual Shirt</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <p>$350</p>
+                </div>
+                </div>
+                <div class="pro">
+       
+                    <img src="product4.png.jpg">
+                    <div class="des-1">
+                        <span>Dennis Lingo</span>
+                        <h4>Men's Solid Slim Fit</h4>
+                        <h5>Cotton Casual Shirt</h5>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <p>$350</p>
+                    </div>
+                    </div>
+                    <div class="pro">
+       
+                        <img src="product5.png.jpg">
+                        <div class="des-1">
+                            <span>Dennis Lingo</span>
+                            <h4>Men's Solid Slim Fit</h4>
+                            <h5>Cotton Casual Shirt</h5>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>$350</p>
+                        </div>
+                        </div>
+                        <div class="pro">
+       
+                            <img src="product6.png.jpg">
+                            <div class="des-1">
+                                <span>Dennis Lingo</span>
+                                <h4>Men's Solid Slim Fit</h4>
+                                <h5>Cotton Casual Shirt</h5>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <p>$350</p>
+                            </div>
+                            </div>
+                            <div class="pro">
+       
+                                <img src="product7.png.jpg">
+                                <div class="des-1">
+                                    <span>Dennis Lingo</span>
+                                    <h4>Men's Solid Slim Fit</h4>
+                                    <h5>Cotton Casual Shirt</h5>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <p>$350</p>
+                                </div>
+                                </div>
+                                <div class="pro">
+       
+                                    <img src="product8.png.jpg">
+                                    <div class="des-1">
+                                        <span>Dennis Lingo</span>
+                                        <h4>Men's Solid Slim Fit</h4>
+                                        <h5>Cotton Casual Shirt</h5>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <p>$350</p>
+                                    </div>
+                                    </div>
+                                     <div class="pro">
+       
+                                    <img src="product8.png.jpg">
+                                    <div class="des-1">
+                                        <span>Dennis Lingo</span>
+                                        <h4>Men's Solid Slim Fit</h4>
+                                        <h5>Cotton Casual Shirt</h5>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <p>$350</p>
+                                    </div>
+                                    </div>
+                                    <div class="pro">
+       
+                                        <img src="bottle5.png">
+                                        <div class="des-1">
+                                            <span>Dennis Lingo</span>
+                                            <h4>Men's Solid Slim Fit</h4>
+                                            <h5>Cotton Casual Shirt</h5>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <p>$350</p>
+                                        </div>
+                                        </div>
+                                        <div class="pro">
+       
+                                            <img src="bottle2.png">
+                                            <div class="des-1">
+                                                <span>Dennis Lingo</span>
+                                                <h4>Men's Solid Slim Fit</h4>
+                                                <h5>Cotton Casual Shirt</h5>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <p>$350</p>
+                                            </div>
+                                            </div>
+                                            <div class="pro">
+       
+                                                <img src="bottle3.png">
+                                                <div class="des-1">
+                                                    <span>Dennis Lingo</span>
+                                                    <h4>Men's Solid Slim Fit</h4>
+                                                    <h5>Cotton Casual Shirt</h5>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <p>$350</p>
+                                                </div>
+                                                </div>
+                                                <div class="pro">
+       
+                                                    <img src="mask1.png.jpg">
+                                                    <div class="des-1">
+                                                        <span>Dennis Lingo</span>
+                                                        <h4>Men's Solid Slim Fit</h4>
+                                                        <h5>Cotton Casual Shirt</h5>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <p>$350</p>
+                                                    </div>
+                                                    </div>
+                                                    <div class="pro">
+       
+                                                        <img src="mask2.png.jpg">
+                                                        <div class="des-1">
+                                                            <span>Dennis Lingo</span>
+                                                            <h4>Men's Solid Slim Fit</h4>
+                                                            <h5>Cotton Casual Shirt</h5>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <p>$350</p>
+                                                        </div>
+                                                        </div>
+                                                        <div class="pro">
+       
+                                                            <img src="mask3.png.jpg">
+                                                            <div class="des-1">
+                                                                <span>Dennis Lingo</span>
+                                                                <h4>Men's Solid Slim Fit</h4>
+                                                                <h5>Cotton Casual Shirt</h5>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <p>$350</p>
+                                                            </div>
+                                                            </div>
+                                                            <div class="pro">
+       
+                                                                <img src="sanitizer1.png">
+                                                                <div class="des-1">
+                                                                    <span>Dennis Lingo</span>
+                                                                    <h4>Men's Solid Slim Fit</h4>
+                                                                    <h5>Cotton Casual Shirt</h5>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <p>$350</p>
+                                                                </div>
+                                                                </div>
+                                                                <div class="pro">
+       
+                                                                    <img src="sanitizer2.png">
+                                                                    <div class="des-1">
+                                                                        <span>Dennis Lingo</span>
+                                                                        <h4>Men's Solid Slim Fit</h4>
+                                                                        <h5>Cotton Casual Shirt</h5>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <p>$350</p>
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="pro">
+       
+                                                                        <img src="sanitizer1.png" style="width: 500" height="600" >
+                                                                        <div class="des-1">
+                                                                            <span>Dennis Lingo</span>
+                                                                            <h4>Men's Solid Slim Fit</h4>
+                                                                            <h5>Cotton Casual Shirt</h5>
+                                                                            <i class="fa fa-star"></i>
+                                                                            <i class="fa fa-star"></i>
+                                                                            <i class="fa fa-star"></i>
+                                                                            <i class="fa fa-star"></i>
+                                                                            <i class="fa fa-star"></i>
+                                                                            <p>$350</p>
+                                                                        </div>
+                                                                        </div>
+        </div>
+    <!-- Display related products for laptops here -->
+<div class="related-products" id="phones">
+    <h3>Phones</h3>
+    <div class="pro">
+               
+        <img src="bottle2.png">
+        <div class="des-1">
+            <span>Dennis Lingo</span>
+            <h4>Men's Solid Slim Fit</h4>
+            <h5>Cotton Casual Shirt</h5>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <p>$350</p>
+        </div>
+        </div>
+        <div class="pro-container">
+        <div class="pro">
+
+            <img src="bottle3.png">
+            <div class="des-1">
+                <span>Dennis Lingo</span>
+                <h4>Men's Solid Slim Fit</h4>
+                <h5>Cotton Casual Shirt</h5>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>$350</p>
+            </div>
+            </div>
+            </div>
+    <!-- Display related products for phones here -->
+</div>
+<div class="related-products" id="tablets">
+    <h3>Tablets</h3>
+    <div class="pro-container">
+    <div class="pro">
+               
+        <img src="mask1.png.jpg">
+        <div class="des-1">
+            <span>Dennis Lingo</span>
+            <h4>Men's Solid Slim Fit</h4>
+            <h5>Cotton Casual Shirt</h5>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <p>$350</p>
+        </div>
+        </div>
+
+        <div class="pro">
+
+            <img src="mask2.png.jpg">
+            <div class="des-1">
+                <span>Dennis Lingo</span>
+                <h4>Men's Solid Slim Fit</h4>
+                <h5>Cotton Casual Shirt</h5>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>$350</p>
+            </div>
+            </div>
+            <div class="pro">
+
+                <img src="mask3.png.jpg">
+                <div class="des-1">
+                    <span>Dennis Lingo</span>
+                    <h4>Men's Solid Slim Fit</h4>
+                    <h5>Cotton Casual Shirt</h5>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <p>$350</p>
+                </div>
+                </div>
+                </div>
+    <!-- Display related products for tablets here -->
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const productLinks = document.querySelectorAll(".product-link");
+
+    productLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const category = this.getAttribute("data-category");
+            showRelatedProducts(category);
+        });
+    });
+
+    function showRelatedProducts(category) {
+        const relatedProducts = document.querySelectorAll(".related-products");
+        relatedProducts.forEach(function(product) {
+            product.classList.remove("active");
+        });
+        const targetProduct = document.getElementById(category);
+        if (targetProduct) {
+            targetProduct.classList.add("active");
+        }
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+.navbar img {
+            float: left;
+            max-height: 50px;
+            padding: 5px;
+        }
+.navbar a {
+            display:inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+ .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+         @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .features-section {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 80px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            max-width: 320px;
+            margin-bottom: 40px;
+            flex: 1;
+        }
+
+        .feature img {
+            max-width:350px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .cake {
+      display: flex;
+      align-items: center;
+      margin-bottom:40px;
+    }
+
+    .cake img {
+      max-width: 200px;
+      margin-right: 20px;
+    }
+
+    .cake-details {
+      flex: 1;
+    }
+
+    .cake-details h2 {
+      margin-top: 0;
+    }
+
+    .cake-details p {
+      margin: 5px 0;
+    }
+
+    .order-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="logo.png.jpg" alt="Logo">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="studentjobboard.html">Job Board</a>
+</div>
+<div class="features-section">
+  <div class="feature">
+      <img src="before.png.jpg" alt="Free Delivery" style="height: 300px;">
+      <h2>Available Time</h2>
+      <p>Enjoy free and fast delivery on all orders.</p>
+  </div>
+  <div class="feature">
+    <img src="discount.png.jpg" alt="Free Delivery" style="height: 300px;">
+    <h2>Available Time</h2>
+    <p>Enjoy free and fast delivery on all orders.</p>
+</div>
+  </div>
+  <div class="container">
+    <div class="cake">
+      <img src="white.png.jpg" alt="Cake 1">
+      <div class="cake-details">
+        <h2>White Forest</h2>
+        <p>Price: 700</p>
+        <a href="cakebuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+      </div>
+    </div>
+    <div class="cake">
+      <img src="black.png.jpg" alt="Cake 2">
+      <div class="cake-details">
+        <h2>Black Forest</h2>
+        <p>Price:700</p>
+        <a href="cakebuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+      </div>
+    </div>
+    <!-- Add more cakes as needed -->
+    <div class="cake">
+      <img src="choco.png.jpg" alt="Cake 1">
+      <div class="cake-details">
+        <h2>Chocolate</h2>
+        <p>Price:370</p>
+        <a href="cakebuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+      </div>
+    </div>
+    <div class="cake">
+      <img src="but.png.jpg" alt="Cake 1">
+      <div class="cake-details">
+        <h2>Butterscotch</h2>
+        <p>Price:480</p>
+        <a href="cakebuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+      </div>
+    </div>
+    <div class="cake">
+      <img src="berry.png.jpg" alt="Cake 1">
+      <div class="cake-details">
+        <h2>Strawberry</h2>
+        <p>Price:330</p>
+        <a href="cakebuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+      </div>
+    </div>
+    <div class="cake">
+      <img src="vennela.png.jpg" alt="Cake 1">
+      <div class="cake-details">
+        <h2>vennela</h2>
+        <p>Price:330</p>
+        <a href="cakebuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+      </div>
+    </div>
+    <div class="cake">
+      <img src="honey.png.jpg" alt="Cake 1">
+      <div class="cake-details">
+        <h2>Honey</h2>
+        <p>Price:430</p>
+        <a href="cakebuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+      </div>
+    </div>
+  </div>
+
+ 
+</body>
+</html>

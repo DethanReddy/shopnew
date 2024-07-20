@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Job Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color:black;
+      text-decoration: none;
+    }
+
+    .job {
+      background-color:darkkhaki;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+
+    .job h2 {
+      margin-top: 0;
+    }
+
+    .job p {
+      margin: 5px 0;
+    }
+
+    .apply-button {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .apply-button:hover {
+      background-color: #555;
+    } 
+
+    .quote-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+
+    .quote {
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Hide containers by default */
+    #hackathonContainer, #internshipContainer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Job Board</h1>
+  </header>
+  
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html" id="homeLink">Home</a></li>
+        <li><a href="#" id="hackathonLink">Hackathons</a></li>
+        <li><a href="#" id="internshipLink">Internships</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hackathon listings -->
+    <div id="hackathonContainer">
+      <div class="job">
+        <h2>Onchain Summer Buildathon</h2>
+        <p><strong>Organizer:</strong>Devfolio</p>
+        <p><strong> Last Date:</strong>June 18th,2024</p>
+        <p><strong> Hackathon End Date</strong> July 1st,2024</p>
+        <p><strong>Hackathon Mode:</strong>Oneline</p>
+        <a href="https://devfolio.co/discover" class="apply-button">Register now</a>
+      </div>
+    </div>
+
+    <!-- Internship listings -->
+    <div id="internshipContainer">
+      <div class="job">
+        <h2>Video Editing/Making</h2>
+        <p><strong>Company:</strong>Umla Technologies Private Limited</p>
+        <p><strong>Location:</strong>Work from Home</p>
+        <p><strong>Type:</strong> Internship</p>
+        <p><strong>Last Date</strong>July 3,2024</p>
+        <a href="https://internshala.com/internship/detail/work-from-home-video-editing-making-internship-at-umla-technologies-private-limited1717388890?utm_source=app_share&referral=app_share" class="apply-button">Apply Now</a>
+      </div>
+      <div class="job">
+        <h2>Frontend Development</h2>
+        <p><strong>Company:</strong>Inlabs Global</p>
+        <p><strong>Location:</strong> Work From Home</p>
+        <p><strong>Type:</strong>Internship</p>
+        <p><strong>Last Date</strong>June 17,2024</p>
+        <a href="https://internshala.com/internship/detail/work-from-home-front-end-development-internship-at-inlabs-global1715314016?utm_source=app_share&referral=app_share" class="apply-button">Apply Now</a>
+      </div>
+      
+    </div>
+
+    <!-- Quote -->
+    <div class="quote-container">
+      <p class="quote">"The only way to do great work is to love what you do." - Steve Jobs</p>
+    </div>
+  </div>
+
+  <!-- JavaScript code -->
+  <script>
+    document.getElementById("hackathonLink").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("hackathonContainer").style.display = "block";
+      document.getElementById("internshipContainer").style.display = "none";
+    });
+
+    document.getElementById("internshipLink").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("internshipContainer").style.display = "block";
+      document.getElementById("hackathonContainer").style.display = "none";
+    });
+  </script>
+</body>
+</html>

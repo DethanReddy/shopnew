@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar{
+            background-color: #333;
+            overflow: hidden;
+            width: 100%;
+        }
+        .navbar img{
+            float: left;
+            max-height:50px;
+            padding: 5px;
+        }
+        .navbar a {
+            display:inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+         @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure navbar stays on top of other content */
+    }
+}
+
+/* Additional styles for larger screens (laptops, desktops, etc.) */
+@media screen and (min-width: 769px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+}
+ .product-container {
+  flex-direction: column;
+  margin-top: 20px;
+}
+.img-card img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 4px;
+  height: 520px;
+  object-fit: cover;
+}
+.small-Card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 15px;
+  gap: 12px;
+  margin: 15px;
+}
+.small-Card img {
+  width: 110px;
+  height: 120px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin:18px;
+}
+.small-Card img:active {
+  border: 1px solid #17696a;
+}
+.description {
+  font-size: 16px;
+  color: red;
+  margin-bottom: 20px;
+}
+.features {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.features ul li{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+.product-info h3{
+    font-size: 25px;
+}
+.price {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.service{
+    width:100%;
+    min-width:20px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0,0.03);
+    border: 1px solid #cce7d0;
+    padding: 12px;
+
+}
+.buy-now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 60px;
+    padding: 10px;
+
+}
+.buy-now a{
+    margin-right: 40px;
+    border: 1px solid #333;
+    width:70%;
+    padding: 12px;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.buy-now a:hover{
+    background-color: black;
+}
+h6{
+    font-size: 19px;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+}
+.pro-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+.pro{
+    width:20%;
+    margin:15px
+}
+.pro img{
+    width:100%;
+    border-radius:20px;
+    padding-right: 60px;
+}
+@media screen and (min-width: 601px) {
+            .product-container {
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                gap: 20px;
+                margin-top: 70px;
+            }
+            .pro-container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .pro {
+                width: 15%;
+                min-width: 100px;
+                margin: 35px;
+                padding: 10px 12px;
+            }
+        }
+        footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+.sections-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .section {
+            flex:1;
+            max-width:300px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+        .quick-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+         ul {
+            list-style-type: none;
+    
+        }
+        li a {
+            text-decoration: none;
+            padding-bottom: 10px;
+            font-size: 18px;
+            color: red;
+        }
+        ul  li a:hover{
+            color: black;
+
+        }
+
+        .quick-link {
+            flex: 1;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .icon-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin: 30px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .icon-container .icon:hover {
+            background-color: chartreuse;
+        }
+
+        .icon-container:hover {
+            background-color: red;
+        }
+
+        .contact-section,
+        .other-sections {
+            flex: 1;
+            max-width:300px;
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+     
+
+        .contact-section h2,
+        .other-sections h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png.jpg" alt="Logo">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="studentjobboard.html">Job Board</a>
+    </div>
+     <!-- product section -->
+     <section class="product-container">
+        <!-- left side -->
+        <div class="img-card">
+            <img src="product1.png.jpg" alt="" id="featured-image" style="margin-top:300px;">
+            <!-- small img -->
+            <div class="small-Card">
+                <img src="product3.png.jpg" alt="" class="small-Img">
+                <img src="product4.png.jpg" alt="" class="small-Img">
+                <img src="product5.png.jpg" alt="" class="small-Img">
+                
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>Dennis Lingo</h1>
+            <P class="price">₹400</P>
+            <h2>Description</h2>
+            <p class="description">
+                Premium quality fabric material is used to ensure comfortable and long lasting usage.Three pockets with Zipper give space to carry mobile and other valuables.Two side Pockets and one back pocket with zipper.Strechable fabric makes it useful for running,gym,and night wear.
+              </p>
+            </p>
+            <h3>Product Details</h3>
+            <ul class="features">
+              <li><strong>Fabric:</strong>Cotton</li>
+              <li><strong>Style:</strong>Chino</li>
+              <li><strong>Length:</strong>Ankle Length</li>
+              <li><strong>Occasion Type:</strong>Casual</li>
+            </ul>
+            <div class="service">
+            <h4>Delivery,Service,Return Details</h4>
+            <p><b>Delivery:</b> 1-2 days</p>
+            <p> <b>Service</b>:Cash On Delivery</p>
+            <p><b>Return</b>:Within 2 days of delivery.Free reverse pickup.Full Refund</p>
+            </div>
+            <div class="buy-now">
+            <a href="buy.html">Buy Now</a>
+            </div>
+            </div>
+            </section>
+            <div class="container">
+                <h1>Our Related Products</h1>
+                <div id="products" class="product-list">
+                  <!-- Product items will be added here dynamically -->
+                </div>
+              </div>
+          
+            
+              <footer>
+             <div class="sections-row">
+             <div class="section">
+                                    <h2>About Us</h2>
+                            <p>ShopNew team comitted  to delivering the best in industry.<br>we are more than happy to deliver you the best.</p>
+        </div>
+        <div class="section">
+            <h2>Products and Services</h2>
+                  <p>Menswear shirts</p>
+                    <p>Menswear paints</p>
+                    <p>Menswear Beauty</p>
+        </div>
+        <div class="section">
+             <h2>Quick Links</h2>
+                            <ul>
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="studentjobboard.html">Job Board</a></li>
+                            </ul>
+        </div>
+        <div class="sections-row">
+        <div class="section">
+             <h2>Contacts</h2>
+                            <p>Address:Teacher's colony near koval bus station,samayapuram,Trichy,Tamilnadu</p>
+                            <p></p>Email:
+                        shopnew@gmail.com</p>
+                        <p>Phone:
+                        8309534820</p>
+                        9502391205</p>
+        </div>
+        <div class="icon-container">
+                    Follow Us
+                 <div class="icon"> <a href="https://www.instagram.com/come_2_learn?igshid=YzAwZjE1ZTI0Zg=="> <i class="fa fa-instagram"></i></a></div>
+                 <div class="icon"><a href="https://www.linkedin.com/in/pathakunta-dedhan-reddy-145933251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin-square"></i></a></div>
+                 <div class="icon"><i class="fa fa-facebook-square"></i></div>
+                 </div>
+                  <div class="contact-section">
+                            <h2>Call Us <i class="fa fa-phone contact-icon"></i></h2>
+                            <p>8309534820</p>
+                            <p>9502391205</p>
+                
+                            <h2>Email Us <i class="fa fa-envelope contact-icon"></i></h2>
+                            <p>shopnew@gmail.com</p>
+                         </div>
+    </div>
+    </div>
+    </footer>
+    <script>
+        let featuedImg = document.getElementById('featured-image');
+let smallImgs = document.getElementsByClassName('small-Img');
+
+smallImgs[0].addEventListener('click', () => {
+    featuedImg.src = smallImgs[0].src;
+    smallImgs[0].classList.add('sm-card')
+    smallImgs[1].classList.remove('sm-card')
+    smallImgs[2].classList.remove('sm-card')
+    smallImgs[3].classList.remove('sm-card')
+    smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[1].addEventListener('click', () => {
+    featuedImg.src = smallImgs[1].src;
+    smallImgs[0].classList.remove('sm-card')
+    smallImgs[1].classList.add('sm-card')
+    smallImgs[2].classList.remove('sm-card')
+    smallImgs[3].classList.remove('sm-card')
+    smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[2].addEventListener('click', () => {
+    featuedImg.src = smallImgs[2].src;
+    smallImgs[0].classList.remove('sm-card')
+    smallImgs[1].classList.remove('sm-card')
+    smallImgs[2].classList.add('sm-card')
+    smallImgs[3].classList.remove('sm-card')
+    smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[3].addEventListener('click', () => {
+    featuedImg.src = smallImgs[3].src;
+    smallImgs[0].classList.remove('sm-card')
+    smallImgs[1].classList.remove('sm-card')
+    smallImgs[2].classList.remove('sm-card')
+    smallImgs[3].classList.add('sm-card')
+    smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[4].addEventListener('click', () => {
+    featuedImg.src = smallImgs[4].src;
+    smallImgs[0].classList.remove('sm-card')
+    smallImgs[1].classList.remove('sm-card')
+    smallImgs[2].classList.remove('sm-card')
+    smallImgs[3].classList.remove('sm-card')
+    smallImgs[4].classList.add('sm-card')
+})
+const products = [
+  {
+    title: "Wireless Bluetooth Headphones",
+    image: ".png.jpg",
+    description: "Enjoy music on-the-go with these lightweight wireless headphones.",
+    price: "$29.99"
+  },
+  {
+    title: "Compact Laptop Backpack",
+    image: "chickencurry.png.jpg",
+    description: "Stylish and durable backpack with multiple compartments for your laptop and essentials.",
+    price: "$39.99"
+  },
+  {
+    title: "Fitness Tracker Watch",
+    image: "fried.png.jpg",
+    description: "Stay active and track your workouts with this sleek fitness tracker watch.",
+    price: "$49.99"
+  },
+  {
+    title: "Portable Coffee Maker",
+    image: "jerra.png.jpg",
+    description: "Brew your favorite coffee anywhere with this compact and portable coffee maker.",
+    price: "$19.99"
+  }
+];
+
+const productsContainer = document.getElementById("products");
+
+// Function to display products
+function displayProducts() {
+  let productHTML = "";
+
+  products.forEach(product => {
+    productHTML += `
+      <div class="product-item">
+        <img class="product-image" src="${product.image}" alt="${product.title}">
+        <div class="product-details">
+          <h2 class="product-title">${product.title}</h2>
+          <p class="product-description">${product.description}</p>
+          <p class="product-price">${product.price}</p>
+        </div>
+      </div>
+    `;
+  });
+
+  productsContainer.innerHTML = productHTML;
+}
+
+// Call the function to display products
+displayProducts();
+    </script>
+    </body>
+</html>

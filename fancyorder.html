@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      header {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #444;
+        padding: 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+      }
+      .contact-form {
+        margin-top: 120px;
+        text-align: center;
+        background-color: #ffffff;
+        margin-left: 10px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 50%; /* Updated width to 50% */
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .contact-form button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .contact-form button:hover {
+        color: black;
+      }
+      .sizes p {
+        font-size: 22px;
+        color: black;
+      }
+
+      .size-option {
+        width: 50%;
+        height: 30px;
+        margin-bottom: 15px;
+        padding: 5px;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>ShopNew</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="contact-form">
+      <h2>Explore Our Exclusive Selection: ShopNew</h2>
+      <!-- contact.html -->
+      <!-- Your existing form fields -->
+      <form
+        action="mailto:dedhanreddy3377@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <label for="name">Enter Your Name</label>
+        <br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
+        <br />
+        <label for="number">Your Mobile Number</label>
+        <br />
+        <input
+          type="number"
+          id="number"
+          name="number"
+          required
+        />
+        <br />
+        <label>quantity</label>
+        <br />
+        <input
+          type="number"
+          value="1"
+          min="1"
+          name="Quantity"
+        />
+        <br />
+        <label>Select Product</label>
+        <br />
+        <select
+          name="Product"
+          id="Product"
+          class="size-option"
+        >
+          <option value="Silver Oxidised Ring">Silver Oxidised Ring</option>
+          <option value="Glass Beads Bracelet-Stretchable">
+            Glass Beads Bracelet-Stretchable
+          </option>
+          <option value="Nail Polish Remover Wipes-Lemon">
+            Nail Polish Remover Wipes-Lemon
+          </option>
+          <option value="Clinic plus Strong  and Healthy Shampoo">
+            Clinic plus Strong and Healthy Shampoo
+          </option>
+          <option value="Zovi Nail Polish">Zovi Nail Polish</option>
+          <option value="Deep Black Look powered with moroccan argon oil">
+            Deep Black Look powered with moroccan argon oil
+          </option>
+          <option value="Stylish Earings">Stylish Earings</option>
+          <option value="Gold Plated CZ Stone Decor Blue Necklace">
+            Gold Plated CZ Stone Decor Blue Necklace
+          </option>
+          <option value="Silver Arrow Chain Anklet">
+            Silver Arrow Chain Anklet
+          </option>
+          <option value="Clover Print Organza Scrunchie">
+            Clover Print Organza Scrunchie
+          </option>
+          <option value="Purple High Quality Medium Sized Clutcher(d-1)">
+            Purple High Quality Medium Sized Clutcher(d-1)
+          </option>
+          <option value="Heart Shape Necklace">Heart Shape Necklace</option>
+          <option value="6mm Pearl Necklace">6mm Pearl Necklace</option>
+          <option value="White Bangles">White Bangles</option>
+          <option value="Gold plated jewellery set">
+            Gold plated jewellery set
+          </option>
+          <option value="Lovisa jewellery set">Lovisa jewellery set</option>
+        </select>
+        <br />
+        <label for="address">Your Address</label>
+        <br />
+        <input
+          type="text"
+          id="address"
+          name="Address"
+          required
+        />
+        <br />
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </body>
+</html>

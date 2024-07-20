@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .navbar img {
+            max-height: 50px;
+        }
+
+        .navbar a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .product-page {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            flex-grow: 1;
+        }
+
+        .product-gallery {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbnail:hover {
+            border-color: #e67e22;
+        }
+
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        .product-cost {
+            font-size: 1.5em;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 1em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .buy-now {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-now:hover {
+            background-color: #d35400;
+        }
+
+        @media (max-width: 768px) {
+            .product-page {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-gallery, .product-details {
+                width: 100%;
+            }
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right img {
+            width: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-right img:hover {
+            transform: scale(1.1);
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .features p {
+            margin: 5px 0;
+        }
+
+        .features i {
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0;
+        }
+        
+        .service, .additional-features {
+            margin-top: 20px;
+        }
+
+        .additional-features .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .additional-features i {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .additional-features p {
+            font-size: 1em;
+            color: #333;
+        }
+
+    </style>
+    <title>Product Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png.jpg" alt="Logo">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="product-page">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="shir.png.jpg" alt="Product Image" id="currentImage">
+            </div>
+            <div class="thumbnail-images">
+                <img src="shir1.png.jpg" alt="Product Image 1" class="thumbnail" onclick="changeImage('shir1.png.jpg')">
+                <img src="shir2.png.jpg" alt="Product Image 2" class="thumbnail" onclick="changeImage('shir2.png.jpg')">
+                <img src="shir3.png.jpg" alt="Product Image 1" class="thumbnail" onclick="changeImage('shir3.png.jpg')">
+                <img src="shir4.png.jpg" alt="Product Image 2" class="thumbnail" onclick="changeImage('shir4.png.jpg')">
+            </div>
+        </div>
+        <div class="product-details">
+            <h1 class="product-name">Bullmer Multicolor Cotton  T-shirt (Pack of 3)</h1>
+            <p class="product-cost">₹399 Rupees</p>
+            <div class="product-description">
+                <h1>Description</h1>
+                <li></li>
+                <h2 style="font-size: 18px">Product Details:</h2>
+                <ul>
+                    <li><strong>Brand:</strong>Bullmer</li>
+                    <li><strong>Feature:</strong>eco-friendly</li>
+                    <li><strong>Fit:</strong>Regular fit</li>
+                    <li><strong>size:Net Quantity:</strong>3</li>
+                    <li><strong></strong>M,L,XL</li>
+                
+                   
+                </ul>
+            </div>
+            <div class="service">
+                <h4>Delivery, Service</h4>
+                <p><b>Delivery:</b> 4-5 days</p>
+                <p><b>Service:</b> Cash On Delivery</p>
+            </div>
+            <div class="additional-features">
+                <h4>Additional Features</h4>
+                <div class="feature-item">
+                    <i class="fa fa-refresh"></i>
+                    <p>:Within 4 or 5 days of delivery.Free reverse pickup.Full Refund</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-shopping-bag"></i>
+                    <p><strong>Shopnew Delivered</strong></p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-lock"></i>
+                    <p>Secure </p>
+                </div>
+            </div>
+            <a href="fashion.html" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>ShopNew</h3>
+                <p>Location: Narasingamangalam, Samayapuram, Trichy</p>
+                <p>Email: info@shopnew.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Who We Are</h3>
+                <a href="about.html">About Us</a><br>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="icon-container">
+                    <a href="https://www.instagram.com/shopnew_starts?igsh=ZWJmaHR5cDg1cGpj"><i class="fa fa-instagram" style="font-size:25px;color:white"></i></a>
+                </div>
+            </div>
+            <div class="footer-section features">
+                <h3>Features</h3>
+                <div class="feature-item">
+                    <i class="fa fa-money" style="font-size:25px;color:white"></i>
+                    <p>COD Available</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-truck" style="font-size:25px;color:white"></i>
+                    <p>Express Delivery</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-undo" style="font-size:25px;color:white"></i>
+                    <p>Easy Returns</p>
+                </div>
+            </div>
+         
+        </div>
+    </footer>
+    <script>
+        function changeImage(image) {
+            document.getElementById('currentImage').src = image;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* New section styles */
+        .sections-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .section {
+            flex:1;
+            max-width:300px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+        .quick-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+         ul {
+            list-style-type: none;
+    
+        }
+        li a {
+            text-decoration: none;
+            padding-bottom: 10px;
+            font-size: 18px;
+            color:dodgerblue;
+        }
+        ul  li a:hover{
+            color: black;
+
+        }
+
+        .quick-link {
+            flex: 1;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .icon-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin: 30px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .icon-container .icon:hover {
+            background-color: chartreuse;
+        }
+
+        .icon-container:hover {
+            background-color: red;
+        }
+
+        .contact-section,
+        .other-sections {
+            flex: 1;
+            max-width:300px;
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+     
+
+        .contact-section h2,
+        .other-sections h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        footer .icon-container,
+        footer .contact-section {
+            flex: 1;
+            max-width: 300px;
+            margin: 10px;
+        }
+
+        footer .icon-container {
+            text-align: center;
+        }
+
+        footer .contact-section {
+            text-align: left;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+            footer .icon-container,
+            footer .contact-section {
+                flex-basis: 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <footer>
+    <div class="sections-row">
+
+        <div class="section">
+    
+            <!-- About Us content goes here -->
+                                    <h2>About Us</h2>
+                            <p>ShopNew team comitted  to delivering the best in industry.<br>we are more than happy to deliver you the best.</p>
+        </div>
+        <div class="section">
+            <!-- Products and Services content goes here -->
+            <h2>Products and Services</h2>
+                  <p>Menswear shirts</p>
+                    <p>Menswear paints</p>
+                    <p>Menswear Beauty</p>
+        </div>
+        <div class="section">
+            <!-- Quick Links content goes here -->
+             <h2>Quick Links</h2>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#shop">Shop</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#cart">Cart</a></li>
+                            </ul>
+        </div>
+        <div class="section">
+            <!-- Contacts content goes here -->
+             <h2>Contacts</h2>
+                            <p>Address:Teacher's colony near koval bus station,samayapuram,Trichy,Tamilnadu</p>
+                            <p></p>Email:
+                        shopnew@gmail.com</p>
+                        <p>Phone:
+                        +911234567890</p>
+                        +910987654321</p>
+        </div>
+        <div class="icon-container">
+                    Follow Us
+                 <div class="icon"> <a href="https://www.instagram.com/come_2_learn?igshid=YzAwZjE1ZTI0Zg=="> <i class="fa fa-instagram"></i></a></div>
+                 <div class="icon"><a href="https://www.linkedin.com/in/pathakunta-dedhan-reddy-145933251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin-square"></i></a></div>
+                 <div class="icon"><i class="fa fa-facebook-square"></i></div>
+                 </div>
+                  <div class="contact-section">
+                            <h2>Call Us <i class="fa fa-phone contact-icon"></i></h2>
+                            <p>830953480</p>
+                            <p>9502391205</p>
+                
+                            <h2>Email Us <i class="fa fa-envelope contact-icon"></i></h2>
+                            <p>shopnew@gmail.com</p>
+                           
+                           
+                        </div>
+                        </div>
+                        </footer>
+    </div>
+    
+</body>
+</html>

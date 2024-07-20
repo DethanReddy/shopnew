@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+.navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+.navbar img {
+            float: left;
+            max-height: 50px;
+            padding: 5px;
+        }
+.navbar a {
+            display:inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+ .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+         @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .welcome-section {
+            background-image: url('product1.png.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .welcome-content {
+            max-width:800px;
+            margin: 0 auto;
+        }
+        .welcome-content summary{
+            color: red;
+        }
+
+        .welcome-heading {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .shop-now-btn {
+            display:inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .shop-now-btn:hover {
+            background-color: #ddd;
+        }
+        .features-section {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 80px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            max-width: 320px;
+            margin-bottom: 40px;
+            flex: 1;
+        }
+
+        .feature img {
+            max-width:350px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .cake {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .cake img {
+      max-width: 200px;
+      margin-right: 20px;
+    }
+
+    .cake-details {
+      flex: 1;
+    }
+
+    .cake-details h2 {
+      margin-top: 0;
+    }
+
+    .cake-details p {
+      margin: 5px 0;
+    }
+
+    .order-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background-color: #45a049;
+    }
+
+
+    
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Student Picks</title>
+</head>
+<body>
+  <div class="navbar">
+    <img src="logo.png.jpg" alt="Logo">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="studentjobboard.html">Job Board</a>
+</div>
+<div class="welcome-section">
+  <div class="welcome-content">
+      <h1 class="welcome-heading">Welcome to our food delivery service </h1>
+      <p class="welcome-text">Thank you for choosing us to satisfy your hunger cravings.Enjoy your meal!.</p>
+      <a href="#shop" class="shop-now-btn">
+          <details>
+              <summary>Menu</summary>
+                  <p>Chicken Rice</p>
+                  <p>Chicken Curry</p>
+                  <p>Fried Rice</p>
+                  <p>Lemon Rice  </p>
+                  <p>Jeera Rice</p>
+                  <p>Chicken pakodi</p>
+          </details>
+          </a>
+     
+  </div>
+</div>
+<div class="container">
+  <div class="cake">
+    <img src="fried.png.jpg" alt="Cake 1">
+    <div class="cake-details">
+      <h2>Fried Rice</h2>
+      <p>Price:₹35 Rupees </p>
+      <a href="foodbuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+    </div>
+  </div>
+  <div class="cake">
+    <img src="chickencurry.png.jpg" alt="Cake 2">
+    <div class="cake-details">
+      <h2>Chicken Curry</h2>
+      <p>Price:₹35 Rupees</p>
+      <a href="foodbuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+    </div>
+  </div>
+  <div class="cake">
+    <img src="chicken.png.jpg" alt="Cake 1">
+    <div class="cake-details">
+      <h2>Chicken</h2>
+      <p>Price: ₹35 Rupees</p>
+      <a href="foodbuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+    </div>
+  </div>
+  <div class="cake">
+    <img src="lemon.png.jpg" alt="Cake 1">
+    <div class="cake-details">
+      <h2>Lemon Rice</h2>
+      <p>Price:₹35 Rupees</p>
+      <a href="foodbuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+    </div>
+  </div>
+  <div class="cake">
+    <img src="jeera.png.jpg" alt="Cake 1">
+    <div class="cake-details">
+      <h2>Jerra Rice</h2>
+      <p>Price:₹35 Rupees</p>
+      <a href="foodbuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+    </div>
+  </div>
+  <div class="cake">
+    <img src="chickencurry.png.jpg" alt="Cake 1">
+    <div class="cake-details">
+      <h2>Chicken Pakodi</h2>
+      <p>Price:₹35 Rupees</p>
+      <a href="foodbuy.html"> <button class="order-btn" onclick="order()">Order Now</button></a>
+    </div>
+  </div>
+  </div>
+
+  
+  
+ 
+  
+</body>
+</html>

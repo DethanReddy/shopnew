@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #444;
+      padding: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+    }
+        .contact-form {
+            margin-top: 120px;
+            text-align:center;
+            background-color: #ffffff;
+            margin-left: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 50%; /* Updated width to 50% */
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+        color: black;
+        }
+        .sizes p {
+  font-size: 22px;
+  color: black;
+}
+
+.size-option {
+  width:50%;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+        
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <header>
+        <h1>ShopNew</h1>
+      </header>
+    
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    <div class="contact-form">
+        <h2>Explore Our Exclusive Selection: ShopNew</h2>
+        <!-- contact.html -->
+  <!-- Your existing form fields -->
+  <form action="mailto:dedhanreddy3377@gmail.com" method="post" enctype="text/plain">
+ <label for="name">Enter Your Name</label>
+            <br>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="num">Your Mobile Number</label>
+            <br>
+            <input type="number" id="num" name="name" required>
+            <br>
+            <label>quantity</label>
+            <br>
+            <input type="number" value="1" min="1" name="Quantity">
+            <br>
+            <label>Select Product</label>
+            <br>
+            <select name="Product" id="Product" class="size-option">
+                <option value="Denver spray combo">Denver spray combo</option>
+                <option value="Vegetal black orgami">Vegetal black orgami</option>
+                <option value="Head &shoulders cool menthol anti-dandruff">Head &shoulders cool menthol anti-dandruff</option>
+                 <option value="Nivea men face wash pack of 3">Nivea men face wash pack of 3</option>
+                <option value="Parachute men advanced lemon & neem anti-dandruff">Parachute men advanced lemon & neem anti-dandruff</option>
+                <option value="Wet pro vitamin B5 cool styling hair gel">Wet pro vitamin B5 cool styling hair gel</option>
+                <option value="Arokeen clensing & refreshing wipes (pack of 3)">Arokeen clensing & refreshing wipes (pack of 3)</option>
+                
+                
+                
+ </select>
+            <br>
+            <label for="address">Your Address</label>
+            <br>
+            <input type="text" id="address" name="Address" required>
+            <br>
+         <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
